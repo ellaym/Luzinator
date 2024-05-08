@@ -1,0 +1,6 @@
+.wwebjs_auth
+node_modules/
+venv
+keys
+node/lib
+config.json
