@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  gpt-service:
+    build:
+      context: ./python/gpt
+      dockerfile: Dockerfile
+    ports:
+      - "5500:5500"
+    volumes:
+      - ./python/gpt:/app
+    networks:
+      - scheduler_network
+
+  calendar-service:
+    build:
+      context: ./python/calendar
+      dockerfile: Dockerfile
+    ports:
+      - "5544:5544"
+    volumes:
+      - ./python/calendar:/app
+    networks:
+      - scheduler_network
+
+  whatsapp-service:
+    build:
+      context: ./node
+      dockerfile: Dockerfile
+    volumes:
+      - ./node:/app
+    networks:
+      - scheduler_network
+
+networks:
+  scheduler_network:
+    driver: bridge
