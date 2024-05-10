@@ -1,3 +1,3 @@
-[submodule "lib/GenericWhatsappAutomation"]
-	path = node/lib/GenericWhatsappAutomation
+[submodule "node/lib/GenericSubmoduleAutomation"]
+	path = node/lib/GenericSubmoduleAutomation
 	url = git@github.com:ellaym/GenericWhatsappAutomation.git
